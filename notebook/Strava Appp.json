@@ -37,8 +37,9 @@
 				"nodeCount": 3,
 				"cores": 4,
 				"memory": 28,
-				"extraHeader": null
-			}
+				"automaticScaleJobs": false
+			},
+			"sessionKeepAliveTimeout": 30
 		},
 		"cells": [
 			{
@@ -47,6 +48,46 @@
 					"print('test')"
 				],
 				"execution_count": 1
+			},
+			{
+				"cell_type": "code",
+				"source": [
+					"import requests"
+				],
+				"execution_count": 2
+			},
+			{
+				"cell_type": "code",
+				"source": [
+					"r =requests.get('https://xkcd.com/1906/')"
+				],
+				"execution_count": 3
+			},
+			{
+				"cell_type": "code",
+				"source": [
+					"from __future__ import print_statement\n",
+					"import time\n",
+					"import swagger_client\n",
+					"from swagger_client.rest import ApiException\n",
+					"from pprint import pprint\n",
+					"\n",
+					"# Configure OAuth2 access token for authorization: strava_oauth\n",
+					"swagger_client.configuration.access_token = '508c4f41d857785a0292851794c3e533a1a6668c'\n",
+					"\n",
+					"# create an instance of the API class\n",
+					"api_instance = swagger_client.ActivitiesApi()\n",
+					"id = 24904907 # Long | The identifier of the activity.\n",
+					"includeAllEfforts = true # Boolean | To include all segments efforts. (optional)\n",
+					"\n",
+					"try: \n",
+					"    # Get Activity\n",
+					"    api_response = api_instance.getActivityById(id, includeAllEfforts=includeAllEfforts)\n",
+					"    pprint(api_response)\n",
+					"except ApiException as e:\n",
+					"    print(\"Exception when calling ActivitiesApi->getActivityById: %s\\n\" % e)"
+				],
+				"execution_count": null
 			}
 		]
 	}
