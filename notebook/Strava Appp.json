@@ -47,21 +47,21 @@
 				"source": [
 					"print('test')"
 				],
-				"execution_count": 1
+				"execution_count": 10
 			},
 			{
 				"cell_type": "code",
 				"source": [
 					"import requests"
 				],
-				"execution_count": 2
+				"execution_count": 11
 			},
 			{
 				"cell_type": "code",
 				"source": [
 					"r =requests.get('https://xkcd.com/1906/')"
 				],
-				"execution_count": 3
+				"execution_count": 12
 			},
 			{
 				"cell_type": "code",
@@ -80,14 +80,17 @@
 					"id = 24904907 # Long | The identifier of the activity.\n",
 					"includeAllEfforts = true # Boolean | To include all segments efforts. (optional)\n",
 					"\n",
-					"try: \n",
-					"    # Get Activity\n",
-					"    api_response = api_instance.getActivityById(id, includeAllEfforts=includeAllEfforts)\n",
-					"    pprint(api_response)\n",
-					"except ApiException as e:\n",
-					"    print(\"Exception when calling ActivitiesApi->getActivityById: %s\\n\" % e)"
+					"api_response = api_instance.getActivityById(id, includeAllEfforts=includeAllEfforts)\n",
+					"# print(api_response)\n",
+					"\n",
+					"# try: \n",
+					"#     # Get Activity\n",
+					"#     api_response = api_instance.getActivityById(id, includeAllEfforts=includeAllEfforts)\n",
+					"#     pprint(api_response)\n",
+					"# except ApiException as e:\n",
+					"#     print(\"Exception when calling ActivitiesApi->getActivityById: %s\\n\" % e)"
 				],
-				"execution_count": null
+				"execution_count": 13
 			}
 		]
 	}
