@@ -47,21 +47,14 @@
 				"source": [
 					"print('test')"
 				],
-				"execution_count": 10
+				"execution_count": 20
 			},
 			{
 				"cell_type": "code",
 				"source": [
 					"import requests"
 				],
-				"execution_count": 11
-			},
-			{
-				"cell_type": "code",
-				"source": [
-					"r =requests.get('https://xkcd.com/1906/')"
-				],
-				"execution_count": 12
+				"execution_count": 21
 			},
 			{
 				"cell_type": "code",
@@ -78,19 +71,36 @@
 					"# create an instance of the API class\n",
 					"api_instance = swagger_client.ActivitiesApi()\n",
 					"id = 24904907 # Long | The identifier of the activity.\n",
-					"includeAllEfforts = true # Boolean | To include all segments efforts. (optional)\n",
-					"\n",
-					"api_response = api_instance.getActivityById(id, includeAllEfforts=includeAllEfforts)\n",
-					"# print(api_response)\n",
-					"\n",
-					"# try: \n",
-					"#     # Get Activity\n",
-					"#     api_response = api_instance.getActivityById(id, includeAllEfforts=includeAllEfforts)\n",
-					"#     pprint(api_response)\n",
-					"# except ApiException as e:\n",
-					"#     print(\"Exception when calling ActivitiesApi->getActivityById: %s\\n\" % e)"
+					"includeAllEfforts = true # Boolean | To include all segments efforts. (optional)"
 				],
-				"execution_count": 13
+				"execution_count": 22
+			},
+			{
+				"cell_type": "code",
+				"source": [
+					"api_response = api_instance.getActivityById(id, includeAllEfforts=includeAllEfforts)"
+				],
+				"execution_count": 23
+			},
+			{
+				"cell_type": "code",
+				"source": [
+					"print(api_response)"
+				],
+				"execution_count": 24
+			},
+			{
+				"cell_type": "code",
+				"source": [
+					"\n",
+					"try: \n",
+					"    # Get Activity\n",
+					"    api_response = api_instance.getActivityById(id, includeAllEfforts=includeAllEfforts)\n",
+					"    pprint(api_response)\n",
+					"except ApiException as e:\n",
+					"    print(\"Exception when calling ActivitiesApi->getActivityById: %s\\n\" % e)"
+				],
+				"execution_count": 25
 			}
 		]
 	}
