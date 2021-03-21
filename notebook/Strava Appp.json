@@ -1,0 +1,53 @@
+{
+	"name": "Strava Appp",
+	"properties": {
+		"nbformat": 4,
+		"nbformat_minor": 2,
+		"bigDataPool": {
+			"referenceName": "CFSparkPool",
+			"type": "BigDataPoolReference"
+		},
+		"sessionProperties": {
+			"driverMemory": "28g",
+			"driverCores": 4,
+			"executorMemory": "28g",
+			"executorCores": 4,
+			"numExecutors": 2,
+			"conf": {
+				"spark.dynamicAllocation.enabled": "false",
+				"spark.dynamicAllocation.minExecutors": "2",
+				"spark.dynamicAllocation.maxExecutors": "2"
+			}
+		},
+		"metadata": {
+			"saveOutput": true,
+			"language_info": {
+				"name": "python"
+			},
+			"a365ComputeOptions": {
+				"id": "/subscriptions/9dae8cf2-d7fd-4861-8e21-a92dad2c0a57/resourceGroups/cf-webapp-rg/providers/Microsoft.Synapse/workspaces/cf-webapp-synapse/bigDataPools/CFSparkPool",
+				"name": "CFSparkPool",
+				"type": "Spark",
+				"endpoint": "https://cf-webapp-synapse.dev.azuresynapse.net/livyApi/versions/2019-11-01-preview/sparkPools/CFSparkPool",
+				"auth": {
+					"type": "AAD",
+					"authResource": "https://dev.azuresynapse.net"
+				},
+				"sparkVersion": "2.4",
+				"nodeCount": 3,
+				"cores": 4,
+				"memory": 28,
+				"extraHeader": null
+			}
+		},
+		"cells": [
+			{
+				"cell_type": "code",
+				"source": [
+					"print('test')"
+				],
+				"execution_count": 1
+			}
+		]
+	}
+}
