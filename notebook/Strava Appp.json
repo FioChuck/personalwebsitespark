@@ -4,7 +4,7 @@
 		"nbformat": 4,
 		"nbformat_minor": 2,
 		"bigDataPool": {
-			"referenceName": "CFSparkPool",
+			"referenceName": "ApacheSparkPool",
 			"type": "BigDataPoolReference"
 		},
 		"sessionProperties": {
@@ -32,16 +32,16 @@
 				"name": "python"
 			},
 			"a365ComputeOptions": {
-				"id": "/subscriptions/9dae8cf2-d7fd-4861-8e21-a92dad2c0a57/resourceGroups/cf-webapp-rg/providers/Microsoft.Synapse/workspaces/cf-webapp-synapse/bigDataPools/CFSparkPool",
-				"name": "CFSparkPool",
+				"id": "/subscriptions/9dae8cf2-d7fd-4861-8e21-a92dad2c0a57/resourceGroups/cf-webapp-rg/providers/Microsoft.Synapse/workspaces/cf-webapp-synapse/bigDataPools/ApacheSparkPool",
+				"name": "ApacheSparkPool",
 				"type": "Spark",
-				"endpoint": "https://cf-webapp-synapse.dev.azuresynapse.net/livyApi/versions/2019-11-01-preview/sparkPools/CFSparkPool",
+				"endpoint": "https://cf-webapp-synapse.dev.azuresynapse.net/livyApi/versions/2019-11-01-preview/sparkPools/ApacheSparkPool",
 				"auth": {
 					"type": "AAD",
 					"authResource": "https://dev.azuresynapse.net"
 				},
 				"sparkVersion": "2.4",
-				"nodeCount": 3,
+				"nodeCount": 10,
 				"cores": 4,
 				"memory": 28,
 				"automaticScaleJobs": false
@@ -52,14 +52,14 @@
 			{
 				"cell_type": "code",
 				"source": [
-					"from __future__ import print_statement"
+					"from future import print_statement"
 				],
 				"execution_count": 1
 			},
 			{
 				"cell_type": "code",
 				"source": [
-					"import requests"
+					"import future"
 				],
 				"execution_count": 2
 			},
