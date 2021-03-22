@@ -21,6 +21,13 @@
 		},
 		"metadata": {
 			"saveOutput": true,
+			"synapse_widget": {
+				"version": "0.1"
+			},
+			"kernelspec": {
+				"name": "synapse_pyspark",
+				"display_name": "Synapse PySpark"
+			},
 			"language_info": {
 				"name": "python"
 			},
@@ -45,16 +52,16 @@
 			{
 				"cell_type": "code",
 				"source": [
-					"print('test')"
+					"from __future__ import print_statement"
 				],
-				"execution_count": 20
+				"execution_count": 1
 			},
 			{
 				"cell_type": "code",
 				"source": [
 					"import requests"
 				],
-				"execution_count": 21
+				"execution_count": 2
 			},
 			{
 				"cell_type": "code",
@@ -73,21 +80,21 @@
 					"id = 24904907 # Long | The identifier of the activity.\n",
 					"includeAllEfforts = true # Boolean | To include all segments efforts. (optional)"
 				],
-				"execution_count": 22
+				"execution_count": 3
 			},
 			{
 				"cell_type": "code",
 				"source": [
 					"api_response = api_instance.getActivityById(id, includeAllEfforts=includeAllEfforts)"
 				],
-				"execution_count": 23
+				"execution_count": null
 			},
 			{
 				"cell_type": "code",
 				"source": [
 					"print(api_response)"
 				],
-				"execution_count": 24
+				"execution_count": null
 			},
 			{
 				"cell_type": "code",
@@ -100,7 +107,7 @@
 					"except ApiException as e:\n",
 					"    print(\"Exception when calling ActivitiesApi->getActivityById: %s\\n\" % e)"
 				],
-				"execution_count": 25
+				"execution_count": null
 			}
 		]
 	}
